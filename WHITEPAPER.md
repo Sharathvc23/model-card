@@ -18,7 +18,7 @@ Existing model card formats tend to treat these paradigms as separate concerns, 
 
 ### 1.2 Motivation
 
-The NANDA (Network for Agent Discovery and Attestation) ecosystem requires machine-readable model metadata that can be:
+The NANDA (Network of AI Agents in Decentralized Architecture) ecosystem requires machine-readable model metadata that can be:
 
 1. **Validated at construction time** — preventing malformed records from entering the registry.
 2. **Queried uniformly** — regardless of whether the underlying model is a LoRA adapter or a heuristic fallback.
@@ -319,6 +319,6 @@ Several directions merit further investigation:
 
 3. Zaharia, M., Chen, A., Davidson, A., Ghodsi, A., Hong, S.A., Konwinski, A., Murching, S., Nykodym, T., Ogilvie, P., Parkhe, M., Xie, F., and Zuber, C. (2018). "Accelerating the Machine Learning Lifecycle with MLflow." *IEEE Data Engineering Bulletin*, 41(4), pp. 39–45.
 
-4. NANDA Protocol. "Network for Agent Discovery and Attestation." https://projectnanda.org
+4. NANDA Protocol. "Network of AI Agents in Decentralized Architecture." https://projectnanda.org
 
 5. Python Software Foundation. "dataclasses — Data Classes." Python 3.10+ Documentation. https://docs.python.org/3/library/dataclasses.html
