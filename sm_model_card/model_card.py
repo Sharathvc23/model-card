@@ -222,7 +222,7 @@ def compute_dataset_hash(data: list[dict[str, Any]]) -> str:
 __all__ = [
     "MODEL_STATUSES",
     "MODEL_TYPES",
-    "ModelCard",
     "RISK_LEVELS",
+    "ModelCard",
     "compute_dataset_hash",
 ]

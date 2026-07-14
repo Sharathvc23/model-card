@@ -20,7 +20,7 @@ __version__ = "0.2.0"
 __all__ = [
     "MODEL_STATUSES",
     "MODEL_TYPES",
-    "ModelCard",
     "RISK_LEVELS",
+    "ModelCard",
     "compute_dataset_hash",
 ]
