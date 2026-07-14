@@ -1,0 +1,27 @@
+# The sm-* family CI gate (inline variant — this repo has no Makefile):
+# lint, format, strict-ish types, tests. Required by branch protection.
+name: ci
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      # ruff/mypy pinned by the dev extra where declared; installed explicitly
+      # so the gate never depends on transitive luck.
+      - run: pip install -e ".[dev]" ruff mypy
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: mypy sm_model_card
+      - run: python -m pytest -q
